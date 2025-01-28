@@ -7,7 +7,7 @@ function HomePage() {
     <>
       <HeaderLayout />
       <section className="pt-16 max-w-4xl text-center mx-auto container space-y-6">
-        <h1 className="text-5xl font-extrabold">Qلاین</h1>
+        <h1 className="text-5xl font-extrabold">کیولاین</h1>
         <h5 className="md:text-3xl text-xl font-bold">
           پرسشنامه، فـرم و نظرسنجی آنلاین بسازید
         </h5>
