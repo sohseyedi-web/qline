@@ -3,6 +3,7 @@ import ModalWrapper from "@/components/ModalWrapper";
 import ToggleSwitch from "@/ui/ToggleSwitch";
 import { useState } from "react";
 import { RiUserLine } from "react-icons/ri";
+import AuthContainer from "./auth/AuthContainer";
 
 const HeaderLayout = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +27,7 @@ const HeaderLayout = () => {
           onClose={() => setIsOpen(!isOpen)}
           title="ورود کاربران"
         >
-          اثمم
+          <AuthContainer />
         </ModalWrapper>
       </div>
     </header>
