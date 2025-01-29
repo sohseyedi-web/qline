@@ -19,7 +19,7 @@ const Button = ({
     <button
       onClick={onClick}
       className={cn(
-        "mt-5 btn lg:text-lg text-base rounded-xl transition-all duration-300 border-none w-full h-[45px]",
+        "mt-5 btn rounded-xl transition-all duration-300 border-none w-full h-[45px]",
         className
       )}
     >
