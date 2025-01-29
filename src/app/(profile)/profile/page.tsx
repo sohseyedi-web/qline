@@ -1,5 +1,5 @@
 export default function ProfilePage() {
     return(
-        <div>profile</div>
+        <section className="p-3">soheil</section>
     )
 }
