@@ -23,6 +23,7 @@ const HeaderLayout = () => {
           <RiUserLine size={25} className="md:hidden block" />
         </button>
         <ModalWrapper
+          className="lg:w-[28%] md:w-[50%]"
           isOpen={isOpen}
           onClose={() => setIsOpen(!isOpen)}
           title="ورود کاربران"
