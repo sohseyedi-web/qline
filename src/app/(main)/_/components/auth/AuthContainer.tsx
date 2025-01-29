@@ -7,6 +7,7 @@ import { FieldValues, useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import SendOTP from "./SendOTP";
 import CheckOTP from "./CheckOTP";
+import CompleteProfile from "./CompleteProfile";
 
 const AuthContainer = () => {
   const [step, setStep] = useState(1);
@@ -49,6 +50,8 @@ const AuthContainer = () => {
             setStep={setStep}
           />
         );
+      case 3:
+        return <CompleteProfile />;
     }
   };
 
