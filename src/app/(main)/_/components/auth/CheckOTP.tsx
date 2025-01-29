@@ -25,7 +25,11 @@ const CheckOTP = ({ phoneNumber, onResend, setStep }: CheckOtpTypes) => {
       const { data } = await mutateAsync({ phoneNumber, otp });
       const { message } = data?.data;
       toast.success(message);
-      router.push("/complete");
+      if (!data?.data?.user?.isActive) {
+        setStep(3);
+      } else {
+        router.push("/profile");
+      }
     } catch (error: any) {
       toast.error(error?.response?.data?.message);
     }
@@ -74,7 +78,7 @@ const CheckOTP = ({ phoneNumber, onResend, setStep }: CheckOtpTypes) => {
       {time > 0 ? (
         <>
           <Button
-            className={"text-white hover:bg-cyan-600 bg-cyan-800"}
+            className="text-white bg-[#212121] hover:bg-[#161616]"
             loading={isPending}
             title="ثبت کد"
           />
