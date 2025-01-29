@@ -6,6 +6,10 @@ export type ValidationSchemaTypes = {
     value: number;
     message: string;
   };
+  pattern?: {
+    value: RegExp;
+    message: string;
+  };
 };
 
 export type TextFieldTypes = {
