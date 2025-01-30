@@ -41,7 +41,7 @@ const Sidebar = () => {
         <div className="flex-1 my-8 flex flex-col space-y-7">
           <Customlink to="/profile" title="صفحه اصلی"/>
         </div>
-        <Link href={"/profile/me"} className="w-full ">
+        <Link href={"/profile/me"} className="w-full z-[5]">
           <div
             className={`${
               isLoading ? "blur-sm opacity-70" : "opacity-100 blur-0"
@@ -57,7 +57,7 @@ const Sidebar = () => {
               <RiShutDownLine
                 onClick={onLogout}
                 size={28}
-                className="text-red-700 cursor-pointer"
+                className="text-red-700 cursor-pointer z-10"
               />
             )}
           </div>
