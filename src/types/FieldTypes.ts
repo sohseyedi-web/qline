@@ -1,4 +1,9 @@
-import { FieldErrors, FieldValues, UseFormRegister } from "react-hook-form";
+import {
+  FieldErrors,
+  FieldValues,
+  RegisterOptions,
+  UseFormRegister,
+} from "react-hook-form";
 
 export type ValidationSchemaTypes = {
   required?: string;
@@ -12,11 +17,11 @@ export type ValidationSchemaTypes = {
   };
 };
 
-export type TextFieldTypes = {
+export type TextFieldTypes<T extends Record<string, any>> = {
   label: string;
-  name: string;
+  name: keyof T;
   placeholder?: string;
-  register: UseFormRegister<FieldValues>;
+  register: UseFormRegister<T>;
   errors: FieldErrors<FieldValues>;
   validationSchema?: ValidationSchemaTypes;
   value?: string;
